@@ -92,50 +92,24 @@ int main()
 
 
     float vertices[] = {
-        //Primer triángulo
-        0.0f,  0.7f, 0.0f, //v1
-       0.45f, 0.54f, 0.0f, //v2
-        0.0f,  0.0f, 0.0f, //center
+       -0.4f, 0.0f, 0.0f, //v1
+        0.0f, 0.5f, 0.0f, //v2
+        0.0f, 0.0f, 0.0f, //center
 
-        //Segundo triángulo
-       0.45f, 0.54f, 0.0f, //v1
-       0.69f, 0.12f, 0.0f, //v2
-        0.0f,  0.0f, 0.0f, //center
+        //TopTriangle1
+      -0.15f,0.65f, 0.0f, //v1
+       0.15f,0.65f, 0.0f, //v2
+        0.0f, 0.5f, 0.0f, //v3
 
-        //Tercero triángulo
-       0.69f, 0.12f, 0.0f, //v1
-       0.61f,-0.35f, 0.0f, //v2
-        0.0f,  0.0f, 0.0f, //center
+        //TopTriangle2
+       -0.3f,0.65f, 0.0f, //v1
+        0.3f,0.65f, 0.0f, //v2
+        0.0f, 0.9f, 0.0f, //v3
 
-        //Cuarto triángulo
-       0.61f,-0.35f, 0.0f, //v1
-       0.24f,-0.66f, 0.0f, //v2
-        0.0f,  0.0f, 0.0f, //center
-
-        //Quinto triángulo
-       0.24f,-0.66f, 0.0f, //v1
-      -0.24f,-0.66f, 0.0f, //v2
-        0.0f,  0.0f, 0.0f, //center
-
-        //Sexto triángulo
-      -0.24f,-0.66f, 0.0f, //v1
-      -0.61f,-0.35f, 0.0f, //v2
-        0.0f,  0.0f, 0.0f, //center
-
-        //Septimo triángulo
-      -0.61f,-0.35f, 0.0f, //v1
-      -0.69f, 0.12f, 0.0f, //v2
-        0.0f,  0.0f, 0.0f, //center
-
-        //Octavo triángulo
-      -0.69f, 0.12f, 0.0f, //v1
-      -0.45f, 0.54f, 0.0f, //v2
-        0.0f,  0.0f, 0.0f, //center
-
-        //Noveno triángulo
-      -0.45f, 0.54f, 0.0f, //v1
-        0.0f,  0.7f, 0.0f, //v2
-        0.0f,  0.0f, 0.0f, //center
+        //LowSquared1/2
+       -0.45f,0.0f, 0.0f, //v1
+       -0.25f,0.0f, 0.0f, //v2
+      -0.25f,-0.3f, 0.0f, //v3
     };
 
 
@@ -167,7 +141,7 @@ int main()
         glClear(GL_COLOR_BUFFER_BIT);
 
         glUseProgram(shaderProgram);
-        glBindVertexArray(VAO); 
+        glBindVertexArray(VAO);
         // Se coloca la cantidad de vertices
         glDrawArrays(GL_TRIANGLES, 0, 27);
 
