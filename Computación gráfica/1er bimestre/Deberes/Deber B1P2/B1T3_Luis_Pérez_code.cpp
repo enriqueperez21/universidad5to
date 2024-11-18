@@ -19,7 +19,7 @@ const char* fragmentShaderSource = "#version 330 core\n"
 "out vec4 FragColor;\n"
 "void main()\n"
 "{\n"
-"   FragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n"
+"   FragColor = vec4(1.0f, 0.3f, 0.2f, 1.0f);\n"
 "}\n\0";
 
 int main()
@@ -35,7 +35,7 @@ int main()
 #endif
 
 
-    GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "First Triangle", NULL, NULL);
+    GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "0705052728-Luis Enrique Perez Senalin", NULL, NULL);
     if (window == NULL)
     {
         std::cout << "Failed to create GLFW window" << std::endl;
@@ -89,27 +89,53 @@ int main()
     }
     glDeleteShader(vertexShader);
     glDeleteShader(fragmentShader);
-
+    
 
     float vertices[] = {
-       -0.4f, 0.0f, 0.0f, //v1
-        0.0f, 0.5f, 0.0f, //v2
-        0.0f, 0.0f, 0.0f, //center
+        //Primer triángulo
+        0.0f,  0.7f, 0.0f, //v1
+       0.45f, 0.54f, 0.0f, //v2
+        0.0f,  0.0f, 0.0f, //center
 
-        //TopTriangle1
-      -0.15f,0.65f, 0.0f, //v1
-       0.15f,0.65f, 0.0f, //v2
-        0.0f, 0.5f, 0.0f, //v3
+        //Segundo triángulo
+       0.45f, 0.54f, 0.0f, //v1
+       0.69f, 0.12f, 0.0f, //v2
+        0.0f,  0.0f, 0.0f, //center
 
-        //TopTriangle2
-       -0.3f,0.65f, 0.0f, //v1
-        0.3f,0.65f, 0.0f, //v2
-        0.0f, 0.9f, 0.0f, //v3
+        //Tercero triángulo
+       0.69f, 0.12f, 0.0f, //v1
+       0.61f,-0.35f, 0.0f, //v2
+        0.0f,  0.0f, 0.0f, //center
 
-        //LowSquared1/2
-       -0.45f,0.0f, 0.0f, //v1
-       -0.25f,0.0f, 0.0f, //v2
-      -0.25f,-0.3f, 0.0f, //v3
+        //Cuarto triángulo
+       0.61f,-0.35f, 0.0f, //v1
+       0.24f,-0.66f, 0.0f, //v2
+        0.0f,  0.0f, 0.0f, //center
+
+        //Quinto triángulo
+       0.24f,-0.66f, 0.0f, //v1
+      -0.24f,-0.66f, 0.0f, //v2
+        0.0f,  0.0f, 0.0f, //center
+
+        //Sexto triángulo
+      -0.24f,-0.66f, 0.0f, //v1
+      -0.61f,-0.35f, 0.0f, //v2
+        0.0f,  0.0f, 0.0f, //center
+
+        //Septimo triángulo
+      -0.61f,-0.35f, 0.0f, //v1
+      -0.69f, 0.12f, 0.0f, //v2
+        0.0f,  0.0f, 0.0f, //center
+
+        //Octavo triángulo
+      -0.69f, 0.12f, 0.0f, //v1
+      -0.45f, 0.54f, 0.0f, //v2
+        0.0f,  0.0f, 0.0f, //center
+
+        //Noveno triángulo
+      -0.45f, 0.54f, 0.0f, //v1
+        0.0f,  0.7f, 0.0f, //v2
+        0.0f,  0.0f, 0.0f, //center
     };
 
 

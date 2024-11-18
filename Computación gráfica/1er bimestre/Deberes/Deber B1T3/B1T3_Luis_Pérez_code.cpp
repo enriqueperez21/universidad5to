@@ -19,7 +19,7 @@ const char* fragmentShaderSource = "#version 330 core\n"
 "out vec4 FragColor;\n"
 "void main()\n"
 "{\n"
-"   FragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n"
+"   FragColor = vec4(1.0f, 0.3f, 0.2f, 1.0f);\n"
 "}\n\0";
 
 int main()
@@ -35,7 +35,7 @@ int main()
 #endif
 
 
-    GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "First Triangle", NULL, NULL);
+    GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "0705052728-Luis Enrique Perez Senalin", NULL, NULL);
     if (window == NULL)
     {
         std::cout << "Failed to create GLFW window" << std::endl;
@@ -167,7 +167,7 @@ int main()
         glClear(GL_COLOR_BUFFER_BIT);
 
         glUseProgram(shaderProgram);
-        glBindVertexArray(VAO); 
+        glBindVertexArray(VAO);
         // Se coloca la cantidad de vertices
         glDrawArrays(GL_TRIANGLES, 0, 27);
 
